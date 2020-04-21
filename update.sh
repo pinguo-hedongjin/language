@@ -1,6 +1,6 @@
 #!/bin/bash
 #1.同步submodule
-git submodule update
+git pull --rebase
 #2.进入script目录
 cd script
 #3.生成android语言包
