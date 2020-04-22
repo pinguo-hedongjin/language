@@ -12,7 +12,7 @@ def main():
     language = LanguageParser().parse(PROJECT)
 
     print "开始写入Excel"
-    ExcelWriter().write(language, PROJECT)
+    ExcelWriter().write(language, PROJECT + "/国际化.xlsx")
 
 
 

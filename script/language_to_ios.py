@@ -11,7 +11,7 @@ def main():
     print "开始解析Language"
     language = LanguageParser().parse(PROJECT)
 
-    print "开始写入Ios"
+    print "开始写入Android"
     IosWriter().write(language, PROJECT)
 
 
