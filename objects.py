@@ -15,14 +15,13 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 # LANGUAGE目录结构
-LANGUAGE_RESOURCE_DIRECTORY = "language"
 LANGUAGE_SIMPLE_DIRECTORY = "zh"
 LANGUAGE_ENGLISH_DIRECTORY = "en"
 LANGUAGE_LOCALIZATION_FILE = "localization.xml"
 LANGUAGE_LOCALIZATION_DIRECTORY = [LANGUAGE_ENGLISH_DIRECTORY, LANGUAGE_SIMPLE_DIRECTORY]
 
 # ANDROID目录结构
-ANDROID_RESOURCE_DIRECTORY = "android/src/main/res"
+ANDROID_RESOURCE_DIRECTORY = "src/main/res"
 ANDROID_TRADITIONAL_DIRECTORY = "values-zh-rHK"
 ANDROID_LOCALIZATION_FILE = "strings.xml"
 ANDROID_LOCALIZATION_DIRECTORY = ["values", "values-zh-rCN"]
@@ -44,7 +43,7 @@ class LanguageParser(object):
 
         for index in range(len(LANGUAGE_LOCALIZATION_DIRECTORY)):
             result[LANGUAGE_LOCALIZATION_DIRECTORY[index]] = self.localization(
-                path + "/" + LANGUAGE_RESOURCE_DIRECTORY + "/" + LANGUAGE_LOCALIZATION_DIRECTORY[index] + "/" + LANGUAGE_LOCALIZATION_FILE
+                path + "/" + LANGUAGE_LOCALIZATION_DIRECTORY[index] + "/" + LANGUAGE_LOCALIZATION_FILE
             )
 
         return result
@@ -77,7 +76,7 @@ class LanguageWriter(object):
         for index in range(len(LANGUAGE_LOCALIZATION_DIRECTORY)):
             self.localization(
                 dict[LANGUAGE_LOCALIZATION_DIRECTORY[index]],
-                path + "/" + LANGUAGE_RESOURCE_DIRECTORY + "/" + LANGUAGE_LOCALIZATION_DIRECTORY[index]
+                path + "/" + LANGUAGE_LOCALIZATION_DIRECTORY[index]
             )
 
 

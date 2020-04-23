@@ -4,7 +4,7 @@
 import os
 from objects import *
 
-PROJECT = os.path.abspath(os.getcwd() + "/..")
+PROJECT = os.path.abspath(os.getcwd())
 
 
 def main():

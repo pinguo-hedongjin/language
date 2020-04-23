@@ -4,7 +4,7 @@
 import os
 from objects import *
 
-PROJECT = os.path.abspath(os.getcwd() + "/..")
+PROJECT = os.path.abspath(os.getcwd())
 
 
 def main():
@@ -12,7 +12,7 @@ def main():
     language = LanguageParser().parse(PROJECT)
 
     print "开始写入Android"
-    IosWriter().write(language, PROJECT)
+    AndroidWriter().write(language, PROJECT + "/../library/LLanguage")
 
 
 
