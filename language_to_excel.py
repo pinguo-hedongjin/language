@@ -8,12 +8,11 @@ PROJECT = os.path.abspath(os.getcwd())
 
 
 def main():
-    print "开始解析Language"
-    language = LanguageParser().parse(PROJECT)
+    print "开始解析localization.strings"
+    localization_dict = LanguageParser(LANGUAGE_LOCALIZATION_FILE).parse(PROJECT)
 
-    print "开始写入Excel"
-    ExcelWriter().write(language, PROJECT + "/国际化.xlsx")
-
+    print "开始写入localization.xlsx"
+    ExcelWriter().dict(localization_dict, PROJECT + "/localization.xlsx")
 
 
 if __name__ == "__main__":

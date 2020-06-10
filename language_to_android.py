@@ -8,11 +8,11 @@ PROJECT = os.path.abspath(os.getcwd())
 
 
 def main():
-    print "开始解析Language"
-    language = LanguageParser().parse(PROJECT)
+    print "开始解析localization.strings"
+    localization_dict = LanguageParser(LANGUAGE_LOCALIZATION_FILE).parse(PROJECT)
 
-    print "开始写入Android"
-    AndroidWriter().write(language, PROJECT + "/../library/LLanguage")
+    print "开始写入string.xml"
+    AndroidWriter().write(localization_dict, PROJECT + "/../library/LLanguage")
 
 
 
